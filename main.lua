@@ -217,7 +217,7 @@ local function startLoading()
         btn.MouseButton1Click:Connect(function()
             local userKey = input.Text:match("^%s*(.-)%s*$") -- 공백 제거
             if KeyDatabase[userKey] then
-                selectedProfileImage = KeyDatabase[userKey] -- 이미지 할당
+                selectedProfileImage = KeyDatabase[userKey] -- [결합 완료] 입력 키에 따른 이미지 할당
                 mainGui:Destroy(); LoadActualMenu()
             else
                 input.Text = ""; input.PlaceholderText = "잘못된 코드입니다."
@@ -227,3 +227,4 @@ local function startLoading()
 end
 
 startLoading()
+
